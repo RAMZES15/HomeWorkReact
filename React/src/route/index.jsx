@@ -8,7 +8,7 @@ import { Layout } from "../components";
 
 export const Routes =  ()=> {
     return (
-        <HashRouter>
+        <HashRouter basename='/'>
             <RouterRoutes>
                 <Route element={<Layout/>}>
                     <Route path="/" element={<LoginPage/>}/>
