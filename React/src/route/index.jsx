@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes as RouterRoutes, Route} from 'react-router-dom'
+import {HashRouter, Routes as RouterRoutes, Route} from 'react-router-dom'
 import { path } from "./path";
 import { Home } from "../pages/Home";
 import { ProtectedRoad } from "./ProtectedRoad";
@@ -8,7 +8,7 @@ import { Layout } from "../components";
 
 export const Routes =  ()=> {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <RouterRoutes>
                 <Route element={<Layout/>}>
                     <Route path="/" element={<LoginPage/>}/>
@@ -16,6 +16,6 @@ export const Routes =  ()=> {
                     <Route path={path.employeesTable} element={<ProtectedRoad><EmployeesTable/></ProtectedRoad>}/>
                 </Route>
             </RouterRoutes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
