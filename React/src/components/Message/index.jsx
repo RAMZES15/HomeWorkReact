@@ -33,6 +33,7 @@ const messages = [
 export const Message = ()=>{
     return(
         <div className={styles.messageWrapper}>
+            <h2>Message</h2>
            { messages.map(mess =>(
             <div key={mess.senderName + Math.random} className={styles.messageWrapper__message}>
                 <h4>{mess.senderName}</h4>

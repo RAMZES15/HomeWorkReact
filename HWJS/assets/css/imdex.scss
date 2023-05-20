@@ -50,8 +50,6 @@ body {
     &__list {
         overflow-y: scroll;
         height: 100vh;
-        // display: flex;
-        // flex-direction: column-reverse;
         width: 100%;
         padding: 100px 0;
         &::-webkit-scrollbar-thumb {

@@ -18,6 +18,7 @@ export const ExchangeRate = () => {
 
   return (
     <div className={styles.exchangeRateWrapper}>
+      <h2>Exchange Rate</h2>
       {valuta.map(val => {
         if (val.cc == 'USD' || val.cc == 'EUR' || val.cc == 'JPY' || val.cc == 'PLN'|| val.cc == 'XAU' || val.cc == 'XAG' || val.cc == 'XPD' ) {
             return(

@@ -3,37 +3,39 @@ import defaultUser from './assets/default-user-image.png'
 import { AddRemoveEmployee } from '../AddRemoveEmployee';
 import { useState } from 'react'
 
+const employee = [
+  {
+    name: 'Ira',
+    position: 'Accountant',
+  },
+  {
+    name: 'Egor',
+    position: 'cleaner',
+  },
+  {
+    name: 'Artur',
+    position: 'loader',
+  },
+  {
+    name: 'Evgen',
+    position: 'cook',
+  },
+  {
+    name: 'Ilia',
+    position: 'developer',
+  },
+  {
+    name: 'Avgustin',
+    position: 'watcher',
+  },
+  {
+    name: 'Jotaro',
+    position: 'designer',
+  },
+]
+
 export const Employees = () => {
-    const [employees, setEmployees] = useState([
-      {
-        name: 'Ira',
-        position: 'Accountant',
-      },
-      {
-        name: 'Egor',
-        position: 'cleaner',
-      },
-      {
-        name: 'Artur',
-        position: 'loader',
-      },
-      {
-        name: 'Evgen',
-        position: 'cook',
-      },
-      {
-        name: 'Ilia',
-        position: 'developer',
-      },
-      {
-        name: 'Avgustin',
-        position: 'watcher',
-      },
-      {
-        name: 'Jotaro',
-        position: 'designer',
-      },
-    ]);
+    const [employees, setEmployees] = useState(employee);
   
     const addEmployee = (person) => {
         setEmployees([person, ...employees]);
@@ -47,6 +49,7 @@ export const Employees = () => {
     
     return (
         <div className={styles.employeesWrapper}>
+            <h2>Employees</h2>
             <AddRemoveEmployee addEmployee={addEmployee} />
             {employees.map((employee, index) => (
                 <div key={employee.name + index} className={styles.employeesWrapper__employee}>
